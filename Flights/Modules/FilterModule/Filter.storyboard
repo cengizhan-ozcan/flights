@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FilterVC-->
+        <scene sceneID="DCt-Ij-0z8">
+            <objects>
+                <viewController storyboardIdentifier="FilterVC" id="uyD-LZ-pU2" customClass="FilterVC" customModule="Flights" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfQ-lf-TU2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQD-tY-2v1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <action selector="backgroundButtonTapped:" destination="uyD-LZ-pU2" eventType="touchUpInside" id="VbC-2B-f7s"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc2-Ix-eWg">
+                                <rect key="frame" x="0.0" y="721" width="414" height="175"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter Specific Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxy-O8-D61">
+                                        <rect key="frame" x="16" y="8" width="382" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.71764705880000002" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meB-Dk-5c7">
+                                        <rect key="frame" x="62" y="45" width="290" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" textContentType="country-name"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-mx-cdm">
+                                        <rect key="frame" x="16" y="95" width="186" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" red="0.0" green="0.71764705880000002" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="uyD-LZ-pU2" eventType="touchUpInside" id="tDz-n0-nys"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEQ-Oz-icm">
+                                        <rect key="frame" x="212" y="95" width="186" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.71764705882352942" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="filterButtonTapped:" destination="uyD-LZ-pU2" eventType="touchUpInside" id="Ytz-U1-Vfw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zEQ-Oz-icm" firstAttribute="top" secondItem="meB-Dk-5c7" secondAttribute="bottom" constant="16" id="0KD-tp-eLn"/>
+                                    <constraint firstItem="fzm-LY-6GJ" firstAttribute="bottom" secondItem="zEQ-Oz-icm" secondAttribute="bottom" constant="16" id="3Tx-4f-DiT"/>
+                                    <constraint firstItem="fzm-LY-6GJ" firstAttribute="bottom" secondItem="SbN-mx-cdm" secondAttribute="bottom" constant="16" id="B8r-Rg-wEZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oxy-O8-D61" secondAttribute="trailing" constant="16" id="F3q-Uc-WPr"/>
+                                    <constraint firstItem="meB-Dk-5c7" firstAttribute="centerX" secondItem="Gc2-Ix-eWg" secondAttribute="centerX" id="OTg-aL-ldw"/>
+                                    <constraint firstItem="Oxy-O8-D61" firstAttribute="top" secondItem="Gc2-Ix-eWg" secondAttribute="top" constant="8" id="ZHh-gZ-eHp"/>
+                                    <constraint firstItem="SbN-mx-cdm" firstAttribute="leading" secondItem="Gc2-Ix-eWg" secondAttribute="leading" constant="16" id="eFp-Vx-xVP"/>
+                                    <constraint firstItem="zEQ-Oz-icm" firstAttribute="leading" secondItem="SbN-mx-cdm" secondAttribute="trailing" constant="10" id="eij-GR-Ge6"/>
+                                    <constraint firstItem="Oxy-O8-D61" firstAttribute="leading" secondItem="Gc2-Ix-eWg" secondAttribute="leading" constant="16" id="fGE-ZW-jB7"/>
+                                    <constraint firstAttribute="trailing" secondItem="zEQ-Oz-icm" secondAttribute="trailing" constant="16" id="faQ-8s-ifW"/>
+                                    <constraint firstItem="zEQ-Oz-icm" firstAttribute="width" secondItem="SbN-mx-cdm" secondAttribute="width" id="iEs-cV-TsU"/>
+                                    <constraint firstItem="meB-Dk-5c7" firstAttribute="top" secondItem="Oxy-O8-D61" secondAttribute="bottom" constant="16" id="iWr-Zn-otR"/>
+                                    <constraint firstItem="SbN-mx-cdm" firstAttribute="top" secondItem="meB-Dk-5c7" secondAttribute="bottom" constant="16" id="oPo-DH-C8P"/>
+                                    <constraint firstItem="meB-Dk-5c7" firstAttribute="width" secondItem="Gc2-Ix-eWg" secondAttribute="width" multiplier="0.7" id="v2n-UJ-ZSz"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="fzm-LY-6GJ"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eQD-tY-2v1" firstAttribute="top" secondItem="xfQ-lf-TU2" secondAttribute="top" id="BzR-5p-ntZ"/>
+                            <constraint firstItem="KIO-AM-mQk" firstAttribute="trailing" secondItem="Gc2-Ix-eWg" secondAttribute="trailing" id="CmY-rI-YOW"/>
+                            <constraint firstItem="KIO-AM-mQk" firstAttribute="trailing" secondItem="eQD-tY-2v1" secondAttribute="trailing" id="HxB-o1-4mY"/>
+                            <constraint firstAttribute="bottom" secondItem="Gc2-Ix-eWg" secondAttribute="bottom" id="QST-3p-wGx"/>
+                            <constraint firstItem="eQD-tY-2v1" firstAttribute="leading" secondItem="KIO-AM-mQk" secondAttribute="leading" id="uHt-Rj-L4A"/>
+                            <constraint firstItem="Gc2-Ix-eWg" firstAttribute="leading" secondItem="KIO-AM-mQk" secondAttribute="leading" id="vAb-s3-dYD"/>
+                            <constraint firstAttribute="bottom" secondItem="eQD-tY-2v1" secondAttribute="bottom" id="y87-rC-pnw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KIO-AM-mQk"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgrounButton" destination="eQD-tY-2v1" id="DeJ-yQ-PCc"/>
+                        <outlet property="clearButton" destination="SbN-mx-cdm" id="22S-dt-1FT"/>
+                        <outlet property="filterButton" destination="zEQ-Oz-icm" id="9Oa-wo-r5G"/>
+                        <outlet property="filterTextField" destination="meB-Dk-5c7" id="fO1-6X-DvR"/>
+                        <outlet property="filterView" destination="Gc2-Ix-eWg" id="4ay-aN-36z"/>
+                        <outlet property="filterViewBottomConstraint" destination="QST-3p-wGx" id="nb2-vP-wwX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JqE-DE-1Xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="81"/>
+        </scene>
+    </scenes>
+</document>
